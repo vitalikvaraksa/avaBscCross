@@ -326,7 +326,7 @@ const ChainbridgeProvider = ({ children }: IChainbridgeContextProps) => {
       utils
         .hexZeroPad(
           // TODO Wire up dynamic token decimals
-          BigNumber.from(utils.parseUnits(amount.toString(), 18)).toHexString(),
+          BigNumber.from(utils.parseUnits(amount.toString(), 6)).toHexString(),
           32
         )
         .substr(2) + // Deposit Amount (32 bytes)

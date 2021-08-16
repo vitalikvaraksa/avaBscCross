@@ -1,5 +1,5 @@
 import ETHIcon from "./media/tokens/eth.svg";
-import WETHIcon from "./media/tokens/weth.svg";
+//import WETHIcon from "./media/tokens/weth.svg";
 
 export type TokenConfig = {
   address: string;
@@ -30,64 +30,47 @@ export type ChainbridgeConfig = {
 };
 
 export const chainbridgeConfig: ChainbridgeConfig = {
-  // Goerli - Kotti Bridge
+  // BSC - Avalanche
   chains: [
     {
-      chainId: 1,
-      networkId: 5,
-      name: "Ethereum - Goerli",
-      bridgeAddress: "0x2524d71D163f60747630c4EBeB077a9832329646",
-      erc20HandlerAddress: "0xDc26320258ADfd806d125223Fb0F94e54D13FA51",
-      rpcUrl: "https://goerli.prylabs.net",
+      chainId: 0,
+      networkId: 3,
+      name: "ropsten testnet",
+      bridgeAddress: "0xd456Ed988a60156643Aa460421C58D5Ac90a530e",
+      erc20HandlerAddress: "0xf4690FbC7903239FEc7a1281Ccf88db047411B4a",
+      rpcUrl: "https://ropsten.infura.io/v3/ae7e51244f7141848b377da95a776361",
       type: "Ethereum",
-      blockExplorer: "https://goerli.etherscan.io/tx",
+      blockExplorer: "https://bscscan.com",
       nativeTokenSymbol: "ETH",
       tokens: [
         {
-          address: "0x735B895bCb37cBba5812154f4F34480EcE1B672C",
-          name: "Wrapped ETC",
-          symbol: "wETC",
-          imageUri: WETHIcon,
-          resourceId:
-            "0x000000000000000000000023A9FD05ef0c5fb9dDE964C4d4191A169Fd221f802",
-        },
-        {
-          address: "0x14dD060dB55c0E7cc072BD3ab4709d55583119c0",
-          name: "An ERC20",
-          symbol: "ERC20",
+          address: "0xe92481C62aCF2b621cD5e6830c2Ba93D5E3B4585",
+          name: "Tether USD",
+          symbol: "USDT",
           imageUri: ETHIcon,
           resourceId:
-            "0x000000000000000000000014dD060dB55c0E7cc072BD3ab4709d55583119c001",
+            "0x0000000000000000000000e92481C62aCF2b621cD5e6830c2Ba93D5E3B458500",
         },
       ],
     },
     {
-      chainId: 2,
-      networkId: 6,
-      name: "Ethereum Classic - Kotti",
-      bridgeAddress: "0x2524d71D163f60747630c4EBeB077a9832329646",
-      erc20HandlerAddress: "0xDc26320258ADfd806d125223Fb0F94e54D13FA51",
-      rpcUrl: "https://www.ethercluster.com/kotti",
+      chainId: 1,
+      networkId: 4,
+      name: "RINKEBY",
+      bridgeAddress: "0x45C0BA3B5996406814B965fe0ADB1692617d9367",
+      erc20HandlerAddress: "0xF31bD348773C60856e95A109D17945840b991F15",
+      rpcUrl: "https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
       type: "Ethereum",
-      blockExplorer: "https://blockscout.com/etc/kotti/tx",
-      nativeTokenSymbol: "ETC",
+      blockExplorer: "https://cchain.explorer.avax.network/",
+      nativeTokenSymbol: "RNK",
       tokens: [
         {
-          address: "0x23A9FD05ef0c5fb9dDE964C4d4191A169Fd221f8",
-          name: "Wrapped ETC",
-          symbol: "wETC",
-          imageUri: WETHIcon,
-          resourceId:
-            "0x000000000000000000000023A9FD05ef0c5fb9dDE964C4d4191A169Fd221f802",
-          isNativeWrappedToken: true,
-        },
-        {
-          address: "0x14dD060dB55c0E7cc072BD3ab4709d55583119c0",
-          name: "An ERC20",
-          symbol: "ERC20",
+          address: "0x58aeB0a6d4ee141E655d34d2ca413c204970d986",
+          name: "Tether USD",
+          symbol: "USDT",
           imageUri: ETHIcon,
           resourceId:
-            "0x000000000000000000000014dD060dB55c0E7cc072BD3ab4709d55583119c001",
+            "0x0000000000000000000000e92481C62aCF2b621cD5e6830c2Ba93D5E3B458500",
         },
       ],
     },
