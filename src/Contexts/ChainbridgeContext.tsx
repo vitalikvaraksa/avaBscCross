@@ -75,6 +75,7 @@ const ChainbridgeContext = React.createContext<ChainbridgeContext | undefined>(
 
 const ChainbridgeProvider = ({ children }: IChainbridgeContextProps) => {
   const { isReady, network, provider, gasPrice, address } = useWeb3();
+  console.log(gasPrice)
   const [homeChain, setHomeChain] = useState<BridgeConfig | undefined>();
   const [relayerThreshold, setRelayerThreshold] = useState<number | undefined>(
     undefined
@@ -326,7 +327,7 @@ const ChainbridgeProvider = ({ children }: IChainbridgeContextProps) => {
       utils
         .hexZeroPad(
           // TODO Wire up dynamic token decimals
-          BigNumber.from(utils.parseUnits(amount.toString(), 6)).toHexString(),
+          BigNumber.from(utils.parseUnits(amount.toString(), 18)).toHexString(),
           32
         )
         .substr(2) + // Deposit Amount (32 bytes)
@@ -340,6 +341,8 @@ const ChainbridgeProvider = ({ children }: IChainbridgeContextProps) => {
         address,
         homeChain.erc20HandlerAddress
       );
+
+      console.log(homeChain.defaultGasPrice, gasPrice, amount, recipient, utils.parseUnits(amount.toString(), 18), utils.hexlify((recipient.length - 2) / 2), data)
 
       if (Number(utils.formatUnits(currentAllowance)) < amount) {
         await (
