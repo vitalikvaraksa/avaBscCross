@@ -6,9 +6,9 @@
     "@babel/core": "^7.12.3",
     "@babel/runtime": "^7.12.1",
     "@chainsafe/chainbridge-contracts": "^1.0.3",
-    "@chainsafe/web3-context": "1.1.0",
     "@chainsafe/common-components": "1.0.26",
     "@chainsafe/common-theme": "1.0.6",
+    "@chainsafe/web3-context": "1.1.0",
     "@material-ui/styles": "4.10.0",
     "@sentry/react": "^5.26.0",
     "@types/history": "^4.7.8",
@@ -21,6 +21,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
+    "react-social-icons": "^5.5.1",
     "react-toast-notifications": "2.4.0",
     "yup": "^0.29.3"
   },

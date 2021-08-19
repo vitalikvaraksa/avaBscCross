@@ -6,6 +6,7 @@ import AppHeader from "./AppHeader";
 //import { ReactComponent as GlobalSvg } from "../media/Icons/global.svg";
 //import { ReactComponent as GiftSvg } from "../media/Icons/gift.svg";
 //import { ROUTE_LINKS } from "../Components/Routes";
+import { SocialIcon } from 'react-social-icons';
 interface IAppWrapper {
   children: ReactNode | ReactNode[];
 }
@@ -93,6 +94,13 @@ const useStyles = makeStyles(({ animation, constants, palette }: ITheme) => {
         width: 14,
       },
     },
+    wrapSocial: {
+      marginTop: "50px",
+      textAlign: "center",
+      "& > a": {
+        marginLeft: "15px",
+      },
+    }
   });
 });
 
@@ -116,8 +124,11 @@ const AppWrapper: React.FC<IAppWrapper> = ({ children }: IAppWrapper) => {
           </section>
           <div className={classes.pageArea}>{children}</div>
         </section>
-        <div style={{marginTop: "100px", textAlign: "center"}}>
-          sdfsd
+        <div className={classes.wrapSocial}>
+          <SocialIcon url="https://twitter.com/jaketrent" target="_blank" label="Twitter"/>
+          <SocialIcon url="https://telegram.org" target="_blank" label="Telegram"/>
+          <SocialIcon url="https://github.com" target="_blank" label="GitHub"/>
+          <SocialIcon url="https://discord.com" target="_blank" label="Discord"/>
         </div>
         {/* Put CTA here */}
         {/* <a className={classes.cta} rel="noopener noreferrer" target="_blank" href="#">
