@@ -299,7 +299,7 @@ const TransferActiveModal: React.FC<ITransferActiveModalProps> = ({
               </Button>
               <a
                 rel="noopener noreferrer"
-                href="https://discord.com/invite/n2U6x9c"
+                href="https://discord.com"
                 target="_blank"
               >
                 <Button
