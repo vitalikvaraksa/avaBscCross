@@ -373,6 +373,7 @@ const ChainbridgeProvider = ({ children }: IChainbridgeContextProps) => {
         }
       );
 
+      console.log((homeChain.defaultGasPrice || gasPrice).toString(), (bridgeFee || 0).toString());
       await (
         await homeBridge.deposit(
           destinationChain.chainId,
