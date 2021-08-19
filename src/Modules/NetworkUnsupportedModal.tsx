@@ -3,7 +3,6 @@ import React from "react";
 import { makeStyles, createStyles, ITheme } from "@chainsafe/common-theme";
 import CustomModal from "../Components/Custom/CustomModal";
 import {
-  Button,
   ExclamationCircleInverseSvg,
   Typography,
 } from "@chainsafe/common-components";
@@ -121,9 +120,6 @@ const NetworkUnsupportedModal: React.FC<INetworkUnsupportedModalProps> = ({
             href="https://discord.com"
             target="_blank"
           >
-            <Button size="small" className={classes.button} variant="outline">
-              Ask a question on Discord
-            </Button>
           </a>
         </section>
       </section>

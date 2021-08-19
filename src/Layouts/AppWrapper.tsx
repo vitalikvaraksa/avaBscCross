@@ -1,11 +1,11 @@
-import { NavLink, Typography } from "@chainsafe/common-components";
+//import { NavLink, Typography } from "@chainsafe/common-components";
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import React from "react";
 import { ReactNode } from "react";
 import AppHeader from "./AppHeader";
-import { ReactComponent as GlobalSvg } from "../media/Icons/global.svg";
-import { ReactComponent as GiftSvg } from "../media/Icons/gift.svg";
-import { ROUTE_LINKS } from "../Components/Routes";
+//import { ReactComponent as GlobalSvg } from "../media/Icons/global.svg";
+//import { ReactComponent as GiftSvg } from "../media/Icons/gift.svg";
+//import { ROUTE_LINKS } from "../Components/Routes";
 interface IAppWrapper {
   children: ReactNode | ReactNode[];
 }
@@ -105,18 +105,20 @@ const AppWrapper: React.FC<IAppWrapper> = ({ children }: IAppWrapper) => {
         <AppHeader />
         <section className={classes.content}>
           <section className={classes.navTabs}>
-            <NavLink activeClassName="active" to={ROUTE_LINKS.Transfer}>
+            {/*<NavLink activeClassName="active" to={ROUTE_LINKS.Transfer}>
               <GlobalSvg />
               <Typography variant="h5">Transfer</Typography>
             </NavLink>
             <NavLink activeClassName="active" to={ROUTE_LINKS.Wrap}>
               <GiftSvg />
               <Typography variant="h5">Wrap token</Typography>
-            </NavLink>
+            </NavLink>*/}
           </section>
           <div className={classes.pageArea}>{children}</div>
         </section>
-
+        <div style={{marginTop: "100px", textAlign: "center"}}>
+          sdfsd
+        </div>
         {/* Put CTA here */}
         {/* <a className={classes.cta} rel="noopener noreferrer" target="_blank" href="#">
         </a> */}
