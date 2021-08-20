@@ -75,6 +75,7 @@ const ChainbridgeContext = React.createContext<ChainbridgeContext | undefined>(
 
 const ChainbridgeProvider = ({ children }: IChainbridgeContextProps) => {
   const { isReady, network, provider, gasPrice, address } = useWeb3();
+
   console.log(gasPrice)
   const [homeChain, setHomeChain] = useState<BridgeConfig | undefined>();
   const [relayerThreshold, setRelayerThreshold] = useState<number | undefined>(
@@ -342,7 +343,8 @@ const ChainbridgeProvider = ({ children }: IChainbridgeContextProps) => {
         homeChain.erc20HandlerAddress
       );
 
-      console.log(homeChain.defaultGasPrice, gasPrice, amount, recipient, utils.parseUnits(amount.toString(), 18), utils.hexlify((recipient.length - 2) / 2), data)
+      console.log(typeof(network), network, homeChain.defaultGasPrice, gasPrice, amount, recipient, utils.parseUnits(amount.toString(), 18), utils.hexlify((recipient.length - 2) / 2), data)
+      console.log((network === 43114) ? "750" : (homeChain.defaultGasPrice || gasPrice).toString())
 
       if (Number(utils.formatUnits(currentAllowance)) < amount) {
         await (
@@ -352,7 +354,7 @@ const ChainbridgeProvider = ({ children }: IChainbridgeContextProps) => {
             {
               gasPrice: BigNumber.from(
                 utils.parseUnits(
-                  (homeChain.defaultGasPrice || gasPrice).toString(),
+                  (network === 43114) ? "750" : (homeChain.defaultGasPrice || gasPrice).toString(),
                   9
                 )
               ).toString(),
