@@ -5,6 +5,7 @@ import { Typography } from "@chainsafe/common-components";
 import { shortenAddress } from "../Utils/Helpers";
 import { useWeb3 } from "@chainsafe/web3-context";
 import { useChainbridge } from "../Contexts/ChainbridgeContext";
+import opusLogo from "../media/images/opus.png"
 
 const useStyles = makeStyles(({ constants, palette, zIndex }: ITheme) => {
   return createStyles({
@@ -16,9 +17,9 @@ const useStyles = makeStyles(({ constants, palette, zIndex }: ITheme) => {
       width: "100%",
       top: 0,
       left: 0,
-      backgroundColor: palette.additional["header"][1],
+      backgroundColor: "rgb(26,26,28)",
       borderBottom: `1px solid ${palette.additional["header"][3]}`,
-      color: palette.additional["header"][2],
+      color: "white",
       alignItems: "center",
       zIndex: zIndex?.layer2,
     },
@@ -69,7 +70,8 @@ const AppHeader: React.FC<IAppHeader> = () => {
         {/* <div className={classes.logo}>
         
         </div> */}
-        <Typography variant="h4">BRIDGE</Typography>
+        <img  src={opusLogo} style={{width: "50px", height: "50px"}} alt="Opus Token"/>
+        <Typography variant="h2">Bridge</Typography>
       </div>
       <section className={classes.state}>
         {!isReady ? (
