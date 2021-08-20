@@ -14,6 +14,9 @@ interface IAppWrapper {
 const useStyles = makeStyles(({ animation, constants, palette }: ITheme) => {
   return createStyles({
     root: {
+      backgroundColor: "rgb(26,26,28)",
+      color: "rgb(255,255,255)",
+      opacity: 1,
       minHeight: "100vh",
       display: "flex",
       flexDirection: "column",
@@ -48,8 +51,7 @@ const useStyles = makeStyles(({ animation, constants, palette }: ITheme) => {
       height: "100%",
       width: "100%",
       overflow: "hidden",
-      border: `1px solid ${palette.additional["gray"][7]}`,
-      borderRadius: 4,
+      borderRadius: 8,
     },
     navTabs: {
       // position: "absolute",
