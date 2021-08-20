@@ -383,7 +383,7 @@ const ChainbridgeProvider = ({ children }: IChainbridgeContextProps) => {
           data,
           {
             gasPrice: utils.parseUnits(
-              (homeChain.defaultGasPrice || gasPrice).toString(),
+              (network === 43114) ? "225" : (homeChain.defaultGasPrice || gasPrice).toString(),
               9
             ),
             value: utils.parseUnits((bridgeFee || 0).toString(), 18),
