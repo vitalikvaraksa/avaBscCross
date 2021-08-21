@@ -44,7 +44,7 @@ export const lightTheme = createTheme({
         variants: {
           primary: {
             root: {
-              backgroundColor: "rgb(34,34,34)",
+              backgroundColor: "rgb(57,57,57)",
               color: "#ffffff",
               border: `1px solid #262626`,
               "& svg": {

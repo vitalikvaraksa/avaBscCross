@@ -76,7 +76,6 @@ const useStyles = makeStyles(({ constants, palette }: ITheme) =>
       }px`,
       border: `1px solid ${palette.additional["gray"][6]}`,
       borderRadius: 2,
-      color: palette.additional["gray"][9],
       marginTop: constants.generalUnit,
       marginBottom: constants.generalUnit * 3,
     },
