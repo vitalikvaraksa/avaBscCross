@@ -24,7 +24,7 @@ const useStyles = makeStyles(({ animation, constants, palette }: ITheme) => {
       paddingTop: 60,
     },
     inner: {
-      paddingTop: (constants.navItemHeight as number) * 2,
+      //paddingTop: (constants.navItemHeight as number) * 2,
       paddingBottom: (constants.navItemHeight as number) * 2,
     },
     cta: {
