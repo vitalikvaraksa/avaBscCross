@@ -136,8 +136,8 @@ const AppWrapper: React.FC<IAppWrapper> = ({ children }: IAppWrapper) => {
       <div className={classes.wrapSocial}>
         <span><SocialIcon url="https://canopus.network" target="_blank" label="Canopus" bgColor="white" style={{width: 32, height: 32}}/></span>
         <span><SocialIcon url="https://twitter.com/canopus_network" target="_blank" label="Twitter" bgColor="white" style={{width: 32, height: 32}}/></span>
-        <span><SocialIcon url="https://t.me/canopus_network" target="_blank" label="Telegram" bgColor="white" style={{width: 32, height: 32}}/></span>
-        <span><SocialIcon url="https://t.me/CanopusGroup" target="_blank" label="Telegram" bgColor="white" style={{width: 32, height: 32}}/></span>
+        <span><SocialIcon url="https://t.me/canopus_network" target="_blank" label="Telegram" bgColor="white" style={{width: 32, height: 32}} network="telegram"/></span>
+        <span><SocialIcon url="https://t.me/CanopusGroup" target="_blank" label="Telegram" bgColor="white" style={{width: 32, height: 32}} network="telegram"/></span>
         <span><SocialIcon url="https://instagram.com/canopus_network" target="_blank" label="Instagram" bgColor="white" style={{width: 32, height: 32}}/></span>
         <span><SocialIcon url="https://github.com/Canopus-Network-OPUS" target="_blank" label="GitHub" bgColor="white" style={{width: 32, height: 32}}/></span>
         <span><SocialIcon url="https://discord.gg/h3KhyxtcJr" target="_blank" label="Discord" bgColor="white" style={{width: 32, height: 32}}/></span>
