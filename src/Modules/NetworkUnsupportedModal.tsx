@@ -124,6 +124,9 @@ const NetworkUnsupportedModal: React.FC<INetworkUnsupportedModalProps> = ({
           >
             <Button variant="outline">Ask a question on Discord</Button>
           </a>
+          <Button>
+            Cancel
+          </Button>
         </section>
       </section>
     </CustomModal>
