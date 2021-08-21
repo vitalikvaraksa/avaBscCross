@@ -3,6 +3,7 @@ import React from "react";
 import { makeStyles, createStyles, ITheme } from "@chainsafe/common-theme";
 import CustomModal from "../Components/Custom/CustomModal";
 import {
+  Button,
   ExclamationCircleInverseSvg,
   Typography,
 } from "@chainsafe/common-components";
@@ -19,6 +20,7 @@ const useStyles = makeStyles(({ constants, palette }: ITheme) =>
       display: "flex",
       flexDirection: "row",
       padding: `${constants.generalUnit * 6}px ${constants.generalUnit * 7}px`,
+      color: "rgb(34,34,34)",
     },
     heading: {
       marginBottom: constants.generalUnit,
@@ -120,6 +122,7 @@ const NetworkUnsupportedModal: React.FC<INetworkUnsupportedModalProps> = ({
             href="https://discord.com"
             target="_blank"
           >
+            <Button variant="outline">Ask a question on Discord</Button>
           </a>
         </section>
       </section>
