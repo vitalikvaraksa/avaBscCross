@@ -22,13 +22,14 @@ import { object, string } from "yup";
 import { utils } from "ethers";
 import { chainbridgeConfig } from "../../chainbridgeConfig";
 import FeesFormikWrapped from "./FormikContextElements/Fees";
+import { ReactComponent as MetamaskSvg } from "../../media/Icons/metamask.svg"
 
 const useStyles = makeStyles(({ constants, palette }: ITheme) =>
   createStyles({
     root: {
       padding: constants.generalUnit * 6,
       position: "relative",
-      backgroundColor: "rgb(34,34,34)"
+      backgroundColor: "rgb(34,34,34)",
     },
     walletArea: {
       display: "flex",
@@ -38,6 +39,7 @@ const useStyles = makeStyles(({ constants, palette }: ITheme) =>
       width: "100%",
     },
     connectButton: {
+      background: "rgb(57, 57, 57)",
       margin: `${constants.generalUnit * 3}px 0 ${constants.generalUnit * 6}px`,
     },
     connecting: {
@@ -46,6 +48,7 @@ const useStyles = makeStyles(({ constants, palette }: ITheme) =>
     },
     connected: {
       width: "100%",
+      textAlign: "left",
       "& > *:first-child": {
         display: "flex",
         flexDirection: "row",
@@ -111,7 +114,7 @@ const useStyles = makeStyles(({ constants, palette }: ITheme) =>
       "&:hover": {
         borderColor: palette.additional["gray"][6],
         backgroundColor: palette.additional["gray"][7],
-        color: palette.common.white.main,
+        color: "palette.common.white.main",
       },
       "&:focus": {
         borderColor: palette.additional["gray"][6],
@@ -296,7 +299,19 @@ const TransferPage = () => {
               handleConnect();
             }}
           >
-            Connect Metamask
+            <div style={{display: "flex", flexDirection: "row", alignItems: "center", flex: "left", margin: "0"}}>
+              <div style={{margin: "10px", padding: "15px", backgroundColor: "white", borderRadius: "50%"}}>
+                <MetamaskSvg/>
+              </div>
+              <div>
+                <div style={{fontFamily: "arial",fontSize: "18px"}}>MetaMask</div>
+                <div  style={{fontSize: "16px"}}>
+                  Connect using your<br/>
+                  browser wallet
+                </div>
+              </div>
+              
+            </div>
           </Button>
         ) : walletConnecting ? (
           <section className={classes.connecting}>
@@ -448,12 +463,12 @@ const TransferPage = () => {
               Start transfer
             </Button>
           </section>
-          <section>
+          {/*<section>
             <QuestionCircleSvg
               onClick={() => setAboutOpen(true)}
               className={classes.faqButton}
             />
-          </section>
+          </section>*/}
         </Form>
       </Formik>
       <AboutDrawer open={aboutOpen} close={() => setAboutOpen(false)} />

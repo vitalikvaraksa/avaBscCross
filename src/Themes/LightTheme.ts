@@ -44,7 +44,7 @@ export const lightTheme = createTheme({
         variants: {
           primary: {
             root: {
-              backgroundColor: "#262626",
+              backgroundColor: "rgb(34,34,34)",
               color: "#ffffff",
               border: `1px solid #262626`,
               "& svg": {
@@ -52,22 +52,22 @@ export const lightTheme = createTheme({
               },
             },
             active: {
-              backgroundColor: "#ffffff",
-              color: "#262626",
+              backgroundColor: "rgb(46,46,46)",
+              color: "#ffffff",
               "& svg": {
                 fill: "#262626",
               },
             },
             hover: {
-              backgroundColor: "#ffffff",
-              color: "#262626",
+              backgroundColor: "rgb(46,46,46)",
+              color: "#fffffff",
               "& svg": {
                 fill: "#262626",
               },
             },
             focus: {
-              backgroundColor: "#ffffff",
-              color: "#262626",
+              backgroundColor: "rgb(46,46,46)",
+              color: "#ffffff",
               "& svg": {
                 fill: "#262626",
               },
@@ -75,7 +75,7 @@ export const lightTheme = createTheme({
           },
           outline: {
             root: {
-              backgroundColor: "transparent",
+              backgroundColor: "rgb(34,34,34)",
               color: "#ffffff",
               border: `1px solid #ffffff`,
               "& svg": {
@@ -83,24 +83,24 @@ export const lightTheme = createTheme({
               },
             },
             active: {
-              backgroundColor: "#ffffff",
-              color: "#262626",
+              backgroundColor: "rgb(46,46,46)",
+              color: "#ffffff",
               borderColor: "#ffffff",
               "& svg": {
                 fill: "#262626",
               },
             },
             hover: {
-              backgroundColor: "#ffffff",
-              color: "#262626",
+              backgroundColor: "rgb(46,46,46)",
+              color: "#ffffff",
               borderColor: "#ffffff",
               "& svg": {
                 fill: "#262626",
               },
             },
             focus: {
-              backgroundColor: "#ffffff",
-              color: "#262626",
+              backgroundColor: "rgb(34,34,34)",
+              color: "#ffffff",
               borderColor: "#ffffff",
               "& svg": {
                 fill: "#262626",
