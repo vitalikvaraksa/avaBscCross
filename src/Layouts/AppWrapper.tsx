@@ -97,12 +97,15 @@ const useStyles = makeStyles(({ animation, constants, palette }: ITheme) => {
       },
     },
     wrapSocial: {
-      marginTop: "50px",
+      width: "100%",
+      backgroundColor: "rgb(26,26,28)",
+      position: "fixed",
+      bottom: "25px",
       textAlign: "center",
-      "& > a": {
-        marginLeft: "15px",
-      },
-    }
+      "& span": {
+        marginLeft: "15px"
+      }
+    },
   });
 });
 
@@ -126,16 +129,16 @@ const AppWrapper: React.FC<IAppWrapper> = ({ children }: IAppWrapper) => {
           </section>
           <div className={classes.pageArea}>{children}</div>
         </section>
-        <div className={classes.wrapSocial}>
-          <SocialIcon url="https://twitter.com/jaketrent" target="_blank" label="Twitter"/>
-          <SocialIcon url="https://telegram.org" target="_blank" label="Telegram"/>
-          <SocialIcon url="https://github.com" target="_blank" label="GitHub"/>
-          <SocialIcon url="https://discord.com" target="_blank" label="Discord"/>
-        </div>
         {/* Put CTA here */}
         {/* <a className={classes.cta} rel="noopener noreferrer" target="_blank" href="#">
         </a> */}
       </section>
+      <div className={classes.wrapSocial}>
+        <span><SocialIcon url="https://twitter.com/canopus_network" target="_blank" label="Twitter" bgColor="white" style={{width: 35, height: 35}}/>&nbsp;&nbsp;Twitter</span>
+        <span><SocialIcon url="https://t.me/canopus_network" target="_blank" label="Telegram" bgColor="white" style={{width: 35, height: 35}}/>&nbsp;&nbsp;Telegram</span>
+        <span><SocialIcon url="https://github.com/Canopus-Network-OPUS" target="_blank" label="GitHub" bgColor="white" style={{width: 35, height: 35}}/>&nbsp;&nbsp;GitHub</span>
+        <span><SocialIcon url="https://discord.gg/h3KhyxtcJr" target="_blank" label="Discord" bgColor="white" style={{width: 35, height: 35}}/>&nbsp;&nbsp;Discord</span>
+      </div>
     </section>
   );
 };

@@ -119,7 +119,7 @@ const NetworkUnsupportedModal: React.FC<INetworkUnsupportedModalProps> = ({
         <section className={classes.buttons}>
           <a
             rel="noopener noreferrer"
-            href="https://discord.com"
+            href="https://discord.gg/h3KhyxtcJr"
             target="_blank"
           >
             <Button variant="outline">Ask a question on Discord</Button>
