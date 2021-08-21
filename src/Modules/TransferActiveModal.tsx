@@ -3,7 +3,6 @@ import React from "react";
 import { makeStyles, createStyles, ITheme } from "@chainsafe/common-theme";
 import {
   Button,
-  ExclamationCircleSvg,
   ProgressBar,
   Typography,
 } from "@chainsafe/common-components";
@@ -32,6 +31,7 @@ const useStyles = makeStyles(
         border: "none",
         borderRadius: 0,
         transitionDuration: `${animation.transform}ms`,
+        backgroundColor: "rgb(34,34,34)"
       },
       heading: {
         marginBottom: constants.generalUnit,
@@ -46,12 +46,13 @@ const useStyles = makeStyles(
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        border: `1px solid ${palette.additional["transactionModal"][2]}`,
-        color: palette.additional["transactionModal"][3],
-        "& svg": {
+        border: "1px solid #ffffff",
+        color: "#ffffff",
+        "& > svg": {
           height: 20,
           width: 20,
           display: "block",
+          backgroundColor: "#ffffff"
         },
       },
       content: {
@@ -59,6 +60,7 @@ const useStyles = makeStyles(
         flexDirection: "column",
       },
       buttons: {
+        color: "#ffffff",
         display: "flex",
         flexDirection: "row",
         marginTop: constants.generalUnit * 5,
@@ -69,7 +71,7 @@ const useStyles = makeStyles(
       },
       button: {
         borderColor: `${palette.additional["gray"][8]} !important`,
-        color: `${palette.additional["gray"][8]} !important`,
+        color: "#ffffff",
         textDecoration: "none",
         "&:hover": {
           borderColor: `${palette.additional["gray"][8]} !important`,
@@ -126,7 +128,7 @@ const useStyles = makeStyles(
           borderRadius: "0 !important",
           "&  >  *": {
             borderRadius: "0 !important",
-            background: `${palette.additional["transactionModal"][1]} !important`,
+            background: "rgb(34,34,34)",
           },
         },
       },
@@ -180,7 +182,7 @@ const TransferActiveModal: React.FC<ITransferActiveModalProps> = ({
           ) : transactionStatus === "Transfer Completed" ? (
             "3"
           ) : (
-            <ExclamationCircleSvg />
+            "!"
           )}
         </div>
       </section>
