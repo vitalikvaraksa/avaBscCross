@@ -4,7 +4,8 @@ import TransferPage from "./Pages/TransferPage";
 import WrapperPage from "./Pages/WrapperPage";
 
 export const ROUTE_LINKS = {
-  Transfer: "/transfer",
+  //Transfer: "/transfer",
+  Transfer: "",
   Wrap: "/wrap",
 };
 
