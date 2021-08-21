@@ -7,7 +7,6 @@ import PreflightModalTransfer from "../../Modules/PreflightModalTransfer";
 import {
   Button,
   Typography,
-  QuestionCircleSvg,
   SelectInput,
 } from "@chainsafe/common-components";
 import { Form, Formik } from "formik";
@@ -30,6 +29,17 @@ const useStyles = makeStyles(({ constants, palette }: ITheme) =>
       padding: constants.generalUnit * 6,
       position: "relative",
       backgroundColor: "rgb(34,34,34)",
+      fontFamily: "arial",
+      textAlign: "center"
+    },
+    loginLabel: {
+      textAlign: "center",
+      margin: "20px"
+    },
+    walletLink: {
+      marginLeft: "5px",
+      color: "white",
+      cursor: "pointer",
     },
     walletArea: {
       display: "flex",
@@ -290,6 +300,9 @@ const TransferPage = () => {
 
   return (
     <article className={classes.root}>
+      {!isReady && <div className={classes.loginLabel}>
+        Login
+      </div>}
       <div className={classes.walletArea}>
         {!isReady ? (
           <Button
@@ -304,7 +317,7 @@ const TransferPage = () => {
                 <MetamaskSvg/>
               </div>
               <div>
-                <div style={{fontFamily: "arial",fontSize: "18px"}}>MetaMask</div>
+                <div style={{fontSize: "18px"}}>MetaMask</div>
                 <div  style={{fontSize: "16px"}}>
                   Connect using your<br/>
                   browser wallet
@@ -358,7 +371,7 @@ const TransferPage = () => {
           setPreflightModalOpen(true);
         }}
       >
-        <Form
+        {homeChain && <Form
           className={clsx(classes.formArea, {
             disabled: !homeChain,
           })}
@@ -469,7 +482,7 @@ const TransferPage = () => {
               className={classes.faqButton}
             />
           </section>*/}
-        </Form>
+        </Form>}
       </Formik>
       <AboutDrawer open={aboutOpen} close={() => setAboutOpen(false)} />
       <ChangeNetworkDrawer
@@ -500,7 +513,12 @@ const TransferPage = () => {
         tokenSymbol={preflightDetails?.tokenSymbol || ""}
         value={preflightDetails?.tokenAmount || 0}
       />
-      <TransferActiveModal open={!!transactionStatus} close={resetDeposit} />
+      <TransferActiveModal open={!!transactionStatus} close={resetDeposit}/>
+        
+      {!homeChain && <hr style={{width: "100%", left: -1, bottom: 100, position: "absolute", border: "1px solid rgb(46,46,46)", backgroundColor: "", opacity: 1}}></hr>}
+      {!homeChain && <div style={{marginTop: 48, marginBottom: 0, alignItems: "center"}}>
+        Don't have a wallet? <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn"  target="_blank" rel="noopener noreferrer" className={classes.walletLink}>Download here</a>
+      </div>}
     </article>
   );
 };
