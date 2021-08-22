@@ -1,4 +1,4 @@
-//import { NavLink, Typography } from "@chainsafe/common-components";
+//import { NavLink, Typography } from "@chainsafe/common-components"; 
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import React from "react";
 import { ReactNode } from "react";
@@ -122,7 +122,7 @@ const AppWrapper: React.FC<IAppWrapper> = ({ children }: IAppWrapper) => {
               <GlobalSvg />
               <Typography variant="h5">Transfer</Typography>
             </NavLink>
-            <NavLink activeClassName="active" to={ROUTE_LINKS.Wrap}>
+            <Nav   activeClassName="active" to={ROUTE_LINKS.Wrap}>
               <GiftSvg />
               <Typography variant="h5">Wrap token</Typography>
             </NavLink>*/}

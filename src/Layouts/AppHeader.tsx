@@ -1,3 +1,4 @@
+import { MenuDropdown } from "@chainsafe/common-components";
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import React from "react";
 import clsx from "clsx";
@@ -24,6 +25,30 @@ const useStyles = makeStyles(({ constants, palette, zIndex }: ITheme) => {
       zIndex: zIndex?.layer2,
       '@media(max-width: 780px)' : {
         padding: "20px 20px"
+      }
+    },
+    links: {
+      "& p": {
+        fontSize: "16px"
+      },
+      "& span": {
+        //display: "none"
+        fillColor: "red !important"
+      },
+      "& > div": {
+        backgroundColor: "rgb(26,26,28)",
+        borderRadius: "10px",
+        boxShadow: "0px 0px 5px 2px #fff8",
+        color: "#ffffff",
+        "&:hover": {
+          backgroundColor: "rgb(46,46,46)"
+        }
+      },
+      color: "#ffffff",
+      textDecoration: "none",
+      marginRight: "8px",
+      "& svg": {
+        fill: "white"
       }
     },
     left: {
@@ -77,6 +102,12 @@ const AppHeader: React.FC<IAppHeader> = () => {
         <Typography variant="h2">Bridge</Typography>
       </div>
       <section className={classes.state}>
+        <MenuDropdown title="Exchange" animation="rotate" menuItems={[{contents: "Pangolin"}, {contents: "Pancakeswap"}, {contents: "Folgory"}]} className={classes.links} classNames={{item: "test", title: "ss"}}>
+        </MenuDropdown>
+        <MenuDropdown title="Blockchain Explorer" animation="rotate" menuItems={[{contents: "BSC"}, {contents: "Avalanche"}]}  className={classes.links}>
+        </MenuDropdown>
+        <MenuDropdown title="Community"  animation="rotate" menuItems={[{contents: "Bridge Tutorials"}, {contents: "Bridge FAQ"}, {contents: "Developer Docs"}, {contents: "Forum"}]}  className={classes.links}>
+        </MenuDropdown>
         {!isReady ? (
           <Typography variant="h5">No wallet connected</Typography>
         ) : (
