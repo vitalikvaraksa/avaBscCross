@@ -8,6 +8,13 @@ import { useWeb3 } from "@chainsafe/web3-context";
 import { useChainbridge } from "../Contexts/ChainbridgeContext";
 import opusLogo from "../media/images/opus.png"
 
+const PANGOLIN = "https://app.pangolin.exchange/#/swap?inputCurrency=0x76076880e1ebbce597e6e15c47386cd34de4930f";
+const PANCAKESWAP = "https://pancakeswap.finance/swap?inputCurrency=0x76076880e1ebbce597e6e15c47386cd34de4930f";
+const FOLGORY = "https://folgory.com/trade-crypto/OPUS_BTC";
+const BSC = "https://bscscan.com/address/0x76076880e1ebbce597e6e15c47386cd34de4930f";
+const AVALANCHE = "https://avascan.info/blockchain/c/token/0x76076880e1EBBcE597e6E15c47386cd34de4930F";
+
+
 const useStyles = makeStyles(({ constants, palette, zIndex }: ITheme) => {
   return createStyles({
     root: {
@@ -102,9 +109,9 @@ const AppHeader: React.FC<IAppHeader> = () => {
         <Typography variant="h2">Bridge</Typography>
       </div>
       <section className={classes.state}>
-        <MenuDropdown title="Exchange" animation="rotate" menuItems={[{contents: "Pangolin"}, {contents: "Pancakeswap"}, {contents: "Folgory"}]} className={classes.links} classNames={{item: "test", title: "ss"}}>
+        <MenuDropdown title="Exchange" animation="rotate" menuItems={[{contents: "Pangolin", onClick: () => window.open(PANGOLIN, '_blank')}, {contents: "Pancakeswap", onClick: () => window.open(PANCAKESWAP, '_blank')}, {contents: "Folgory", onClick: () => window.open(FOLGORY, '_blank')}]} className={classes.links}>
         </MenuDropdown>
-        <MenuDropdown title="Blockchain Explorer" animation="rotate" menuItems={[{contents: "BSC"}, {contents: "Avalanche"}]}  className={classes.links}>
+        <MenuDropdown title="Blockchain Explorer" animation="rotate" menuItems={[{contents: "BSC", onClick: () => window.open(BSC, '_blank')}, {contents: "Avalanche", onClick: () => window.open(AVALANCHE, '_blank')}]}  className={classes.links}>
         </MenuDropdown>
         <MenuDropdown title="Community"  animation="rotate" menuItems={[{contents: "Bridge Tutorials"}, {contents: "Bridge FAQ"}, {contents: "Developer Docs"}, {contents: "Forum"}]}  className={classes.links}>
         </MenuDropdown>
