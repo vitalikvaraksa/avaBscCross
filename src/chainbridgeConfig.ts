@@ -41,7 +41,7 @@ export const chainbridgeConfig: ChainbridgeConfig = {
       erc20HandlerAddress: "0x50e93704448F6d506bb695a8BAd0f94F1386137C",
       rpcUrl: "https://bsc-dataseed.binance.org",
       type: "Ethereum",
-      blockExplorer: "https://bscscan.com",
+      blockExplorer: "https://bscscan.com/tx",
       nativeTokenSymbol: "BNB",
       tokens: [
         {
@@ -62,7 +62,7 @@ export const chainbridgeConfig: ChainbridgeConfig = {
       erc20HandlerAddress: "0x639D24ac591BB403843Bbc4719b453fc9B089A84",
       rpcUrl: "https://api.avax.network/ext/bc/C/rpc",
       type: "Ethereum",
-      blockExplorer: "https://cchain.explorer.avax.network/address",
+      blockExplorer: "https://cchain.explorer.avax.network/tx",
       nativeTokenSymbol: "AVAX",
       tokens: [
         {
