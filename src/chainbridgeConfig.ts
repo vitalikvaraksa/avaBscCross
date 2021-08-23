@@ -1,5 +1,6 @@
-import ETHIcon from "./media/tokens/eth.svg";
+//import ETHIcon from "./media/tokens/eth.svg";
 //import WETHIcon from "./media/tokens/weth.svg";
+import opusIcon from './media/tokens/opus.png'
 
 export type TokenConfig = {
   address: string;
@@ -47,7 +48,7 @@ export const chainbridgeConfig: ChainbridgeConfig = {
           address: "0x76076880e1ebbce597e6e15c47386cd34de4930f",
           name: "Canopus",
           symbol: "OPUS",
-          imageUri: ETHIcon,
+          imageUri: opusIcon,
           resourceId:
             "0x000000000000000000000076076880e1ebbce597e6e15c47386cd34de4930f00",
         },
@@ -68,7 +69,7 @@ export const chainbridgeConfig: ChainbridgeConfig = {
           address: "0x76076880e1ebbce597e6e15c47386cd34de4930f",
           name: "Canopus",
           symbol: "OPUS",
-          imageUri: ETHIcon,
+          imageUri: opusIcon,
           resourceId:
             "0x000000000000000000000076076880e1ebbce597e6e15c47386cd34de4930f00",
         },
