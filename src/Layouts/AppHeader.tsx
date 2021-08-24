@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { Typography } from "@chainsafe/common-components";
 import { shortenAddress } from "../Utils/Helpers";
 import { useWeb3 } from "@chainsafe/web3-context";
-import { useChainbridge } from "../Contexts/ChainbridgeContext";
+//import { useChainbridge } from "../Contexts/ChainbridgeContext";
 import opusLogo from "../media/images/opus.png"
 
 const PANGOLIN = "https://app.pangolin.exchange/#/swap?inputCurrency=0x76076880e1ebbce597e6e15c47386cd34de4930f";
@@ -97,7 +97,6 @@ interface IAppHeader {}
 const AppHeader: React.FC<IAppHeader> = () => {
   const classes = useStyles();
   const { isReady, address } = useWeb3();
-  const { homeChain } = useChainbridge();
   return (
     <header className={clsx(classes.root)}>
       <div className={classes.left}>
@@ -115,19 +114,15 @@ const AppHeader: React.FC<IAppHeader> = () => {
         </MenuDropdown>
         <MenuDropdown title="FAQ"  animation="rotate" menuItems={[{contents: "Bridge Tutorials"}, {contents: "Bridge FAQ"}, {contents: "Developer Docs"}, {contents: "Listing"}]}  className={classes.links}>
         </MenuDropdown>
-        {!isReady ? (
-          <Typography variant="h5">No wallet connected</Typography>
-        ) : (
+        {isReady &&
           <>
             <div className={classes.indicator}></div>
             <Typography variant="h5" className={classes.address}>
               {address && shortenAddress(address)}
             </Typography>
-            <Typography variant="h5" className={classes.address}>
-              connected to <strong>{homeChain?.name}</strong>
-            </Typography>
+
           </>
-        )}
+        }
       </section>
     </header>
   );
