@@ -14,6 +14,7 @@ const FOLGORY = "https://folgory.com/trade-crypto/OPUS_BTC";
 const BSC = "https://bscscan.com/address/0x76076880e1ebbce597e6e15c47386cd34de4930f";
 const AVALANCHE = "https://avascan.info/blockchain/c/token/0x76076880e1EBBcE597e6E15c47386cd34de4930F";
 const LISTING = "https://forms.gle/5Uw6KoweEprkiob56";
+const DEVELOPER = "https://github.com/Canopus-Network-OPUS/Bridge";
 
 
 const useStyles = makeStyles(({ constants, palette, zIndex }: ITheme) => {
@@ -113,7 +114,7 @@ const AppHeader: React.FC<IAppHeader> = () => {
         </MenuDropdown>
         <MenuDropdown title="Blockchain Explorer" animation="rotate" menuItems={[{contents: "BSC", onClick: () => window.open(BSC, '_blank')}, {contents: "Avalanche", onClick: () => window.open(AVALANCHE, '_blank')}]}  className={classes.links}>
         </MenuDropdown>
-        <MenuDropdown title="FAQ"  animation="rotate" menuItems={[{contents: "Bridge Tutorials"}, {contents: "Bridge FAQ"}, {contents: "Developer Docs"}, {contents: "Listing", onClick: () => window.open(LISTING, '_blank')}]}  className={classes.links}>
+        <MenuDropdown title="FAQ"  animation="rotate" menuItems={[{contents: "Bridge Tutorials"}, {contents: "Bridge FAQ"}, {contents: "Developer Docs", onClick: () => window.open(DEVELOPER, '_blank')}, {contents: "Listing", onClick: () => window.open(LISTING, '_blank')}]}  className={classes.links}>
         </MenuDropdown>
         {isReady &&
           <>
