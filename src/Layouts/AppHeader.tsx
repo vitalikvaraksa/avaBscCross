@@ -113,7 +113,7 @@ const AppHeader: React.FC<IAppHeader> = () => {
         </MenuDropdown>
         <MenuDropdown title="Blockchain Explorer" animation="rotate" menuItems={[{contents: "BSC", onClick: () => window.open(BSC, '_blank')}, {contents: "Avalanche", onClick: () => window.open(AVALANCHE, '_blank')}]}  className={classes.links}>
         </MenuDropdown>
-        <MenuDropdown title="Community"  animation="rotate" menuItems={[{contents: "Bridge Tutorials"}, {contents: "Bridge FAQ"}, {contents: "Developer Docs"}, {contents: "Forum"}]}  className={classes.links}>
+        <MenuDropdown title="FAQ"  animation="rotate" menuItems={[{contents: "Bridge Tutorials"}, {contents: "Bridge FAQ"}, {contents: "Developer Docs"}, {contents: "Listing"}]}  className={classes.links}>
         </MenuDropdown>
         {!isReady ? (
           <Typography variant="h5">No wallet connected</Typography>
