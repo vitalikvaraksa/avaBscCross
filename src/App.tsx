@@ -58,6 +58,7 @@ const App: React.FC<{}> = () => {
         <ToasterProvider autoDismiss>
           <Web3Provider
             tokensToWatch={tokens}
+            ethGasStationApiKey="1ac1e267b18884c081b62993ced48c30d09f2a4e0aa76aae48f97ba53907"
             onboardConfig={{
               walletSelect: {
                 wallets: [{ walletName: "metamask", preferred: true }],
@@ -70,7 +71,7 @@ const App: React.FC<{}> = () => {
             }}
             checkNetwork={false}
             gasPricePollingInterval={120}
-            gasPriceSetting="fast"
+            gasPriceSetting="safeLow"
           >
             <ChainbridgeProvider>
               <Router>
