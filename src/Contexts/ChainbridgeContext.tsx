@@ -354,7 +354,7 @@ const ChainbridgeProvider = ({ children }: IChainbridgeContextProps) => {
             {
               gasPrice: BigNumber.from(
                 utils.parseUnits(
-                  (network === 43114) ? "750" : (homeChain.defaultGasPrice || gasPrice).toString(),
+                  (network === 43114) ? "100" : (homeChain.defaultGasPrice || gasPrice).toString(),
                   9
                 )
               ).toString(),
