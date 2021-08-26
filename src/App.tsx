@@ -72,6 +72,7 @@ const App: React.FC<{}> = () => {
             checkNetwork={false}
             gasPricePollingInterval={120}
             gasPriceSetting="safeLow"
+            cacheWalletSelection={false}
           >
             <ChainbridgeProvider>
               <Router>
