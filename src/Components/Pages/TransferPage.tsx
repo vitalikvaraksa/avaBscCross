@@ -233,7 +233,12 @@ const TransferPage = () => {
   const handleConnect = async () => {
     setWalletConnecting(true);
     !wallet && (await onboard?.walletSelect());
-    await checkIsReady();
+    try {
+      await checkIsReady();  
+    } catch (error) {
+      
+    }
+    
     setWalletConnecting(false);
   };
 
