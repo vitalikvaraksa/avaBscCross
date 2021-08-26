@@ -36,7 +36,7 @@ export const chainbridgeConfig: ChainbridgeConfig = {
     {
       chainId: 0,
       networkId: 56,
-      name: "Binance",
+      name: "Binance Smart Chain",
       bridgeAddress: "0x811317825CdEF7E6b377e4930e48111EBe11f0b8",
       erc20HandlerAddress: "0x50e93704448F6d506bb695a8BAd0f94F1386137C",
       rpcUrl: "https://bsc-dataseed.binance.org",
