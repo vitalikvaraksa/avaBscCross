@@ -1,0 +1,32 @@
+{
+  "chains": [
+    {
+      "name": "Binance",
+      "type": "ethereum",
+      "id": "0",
+      "endpoint": "wss://speedy-nodes-nyc.moralis.io/60ca04c0cc0a62bb55e61fe9/bsc/mainnet/ws",
+      "from": "0x12466e52280ec6bC44A3eb01c6BE56dE42Df0e36",
+      "opts": {
+        "bridge": "0x811317825CdEF7E6b377e4930e48111EBe11f0b8",
+        "erc20Handler": "0x50e93704448F6d506bb695a8BAd0f94F1386137C",
+        "genericHandler": "0x50e93704448F6d506bb695a8BAd0f94F1386137C",
+        "gasLimit": "6800000",
+        "maxGasPrice": "10000000000"
+      }
+    },
+    {
+      "name": "Avalanche",
+      "type": "ethereum",
+      "id": "1",
+      "endpoint": "wss://api.avax.network/ext/bc/C/ws",
+      "from": "0x12466e52280ec6bC44A3eb01c6BE56dE42Df0e36",
+      "opts": {
+        "bridge": "0x7c8BF2a0F332cCeA06741fdF451a620c53395DDc",
+        "erc20Handler": "0x639D24ac591BB403843Bbc4719b453fc9B089A84",
+        "genericHandler": "0x639D24ac591BB403843Bbc4719b453fc9B089A84",
+        "gasLimit": "1000000",
+        "maxGasPrice": "225000000000"
+      }
+    }
+  ]
+}
